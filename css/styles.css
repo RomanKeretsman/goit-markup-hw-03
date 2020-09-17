@@ -9,7 +9,15 @@
 body {
     font-family: var(--main-font);
     font-style: normal;
-
+}
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    outline: 1px solid tomato;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
 }
 
 .link {
@@ -18,36 +26,59 @@ body {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .address {
     font-style: normal;
 }
-
-.header-list-item .current {
-    color: var(--accent-color);
+.title {
+    margin-bottom: 50px;
 }
 
+
+
 /* ==========HEADER================= */
+.header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
 .logo {
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
+    margin-right: 93px;
 
     color: #2196F3;
-
 }
-
 .logo-black {
     color: #000000;
 }
-
 .logo-white {
     color: #FFFFFF;
 }
-
+.header-list {
+    display: flex;
+}
+.header-list-item .current {
+    color: var(--accent-color);
+}
+.header-list-item:not(:nth-child(3)) {
+    margin-right: 50px;
+}
 .header-list-link {
     font-weight: 500;
     font-size: 14px;
@@ -56,12 +87,13 @@ body {
 
     color: var(--title-color);
 }
-
 .header-list-link:hover,
 .header-list-link:focus {
     color: var(--accent-color);
 }
-
+.header-contacts-list {
+    display: flex;
+}
 .header-contacts-link {
     font-weight: 500;
     font-size: 14px;
@@ -70,19 +102,27 @@ body {
 
     color: var(--text-color);
 }
-
+.header-contacts-mail {
+    margin-right: 50px;
+}
 .header-contacts-link:hover,
 .header-contacts-link:focus {
     color: var(--accent-color)
 }
-
 /* ==========END HEADER================= */
 
 /* ==========HERO================= */
 .hero {
     background: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
+.center-box {
+    width: 696px;
+    margin: 0 auto;
 
+}
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -90,28 +130,33 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin-bottom: 30px;
 
     color: #FFFFFF;
 }
-
 .hero-button {
+    padding: 10px 32px;
+    min-width: 200px;
+    min-height: 50px;
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
-    text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
 
     color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: var(--accent-color);
+    border: none;
     border-radius: 4px;
 }
 
 /* ==========END HERO================= */
 
 /* ==========OUR-FEATURES================= */
+.our-features {
+    margin: 94px 0;
+}
 .title {
     font-weight: 700;
     font-size: 36px;
@@ -120,9 +165,11 @@ body {
     letter-spacing: 0.03em;
 
     color: var(--title-color);
+    outline: 1px solid teal;
 }
 
 .our-features-subtitle {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
@@ -144,16 +191,44 @@ body {
 /* ==========END-FEATURES================= */
 
 /* ==========WORK================= */
+.work {
+    margin-bottom: 94px;
+}
 
 /* ==========END WORK================= */
 
 /* ==========TEAM================= */
+.team {
+    padding: 94px 0;
+
+    background: #F5F4FA;
+}
+.team-list {
+    display: flex;
+    justify-content: space-between;
+} 
+.team-img {
+    margin-bottom: 30px;
+}
+.team-list-item {
+    width: 270px;
+    text-align: center;
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+
 .team-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.188;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 
     color: var(--title-color);
 }
@@ -164,6 +239,7 @@ body {
     line-height: 1.188;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
 
     color: var(--text-color);
 }
